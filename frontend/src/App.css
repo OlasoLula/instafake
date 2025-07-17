@@ -1,38 +1,111 @@
-.App {
-    text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
 }
 
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+.instagram-font {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-weight: 300;
+  letter-spacing: -0.01em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+/* Custom input styles to match Instagram */
+input[type="text"], input[type="password"] {
+  background-color: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  padding: 9px 8px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #262626;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+input[type="text"]:focus, input[type="password"]:focus {
+  border-color: #a8a8a8;
+  outline: none;
 }
 
-.App-link {
-    color: #61dafb;
+input[type="text"]::placeholder, input[type="password"]::placeholder {
+  color: #8e8e8e;
+  font-size: 12px;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* Custom button styles */
+button[type="submit"] {
+  background-color: #0095f6;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px 9px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover:not(:disabled) {
+  background-color: #1877f2;
+}
+
+button[type="submit"]:disabled {
+  background-color: #0095f6;
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Custom link styles */
+a {
+  color: #0095f6;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1877f2;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 640px) {
+  .max-w-md {
+    max-width: 100%;
+    margin: 0 20px;
+  }
+  
+  .instagram-font {
+    font-size: 1.5rem;
+  }
+}
+
+/* Instagram-style form container */
+.bg-white {
+  background-color: #ffffff;
+  border: 1px solid #dbdbdb;
+  border-radius: 1px;
+}
+
+/* Error message styling */
+.text-red-500 {
+  color: #ed4956;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Loading state */
+.disabled\:opacity-50:disabled {
+  opacity: 0.3;
+}
+
+/* App store badges responsive */
+@media (max-width: 480px) {
+  .flex.justify-center.space-x-4 img {
+    height: 35px;
+  }
 }
